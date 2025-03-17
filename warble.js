@@ -103,3 +103,51 @@ function toggleChat() {
        chatPopup.style.display = "none";
    }
 }
+
+function sendMessage() {
+    let message = document.getElementById("chatMessage").value;
+    // preventing sending an empty message
+    if (message === "") {return}
+    console.log("Message detected --> " + message);
+
+    let chatDisplay = document.querySelector(".chatDisplay");
+    let newMessage = document.createElement("div");
+    newMessage.classList.add("user-message");
+
+    newMessage.textContent = message; // set the text
+
+    chatDisplay.appendChild(newMessage);
+
+    document.getElementById("chatMessage").value = "";
+    autoScroll();
+
+    setTimeout( () => {chatApollo(message)}, 1000);
+
+}
+
+function chatApollo(usersMessage) {
+    let chatDisplay = document.querySelector(".chatDisplay");
+
+    let apolloMessage = document.createElement("div");
+    apolloMessage.classList.add("apollo-message");
+
+    if (usersMessage.toLowerCase() === "hello") {
+
+        apolloMessage.textContent = "Hello, how can I help you?";
+        chatDisplay.appendChild(apolloMessage);
+        autoScroll();
+    }else if (usersMessage.toLowerCase() === "dark mode") {
+        apolloMessage.textContent = "Light mode on✔️";
+        chatDisplay.appendChild(apolloMessage);
+        autoScroll();
+        toggleDarkMode();
+    }
+
+
+}
+// Function to force scrolling to the bottom
+function autoScroll() {
+    let chatBody = document.querySelector(".chat-body");
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+}

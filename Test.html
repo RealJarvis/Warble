@@ -53,5 +53,35 @@
     <script src="warble.js"></script>
 </div>
 
+<footer>
+    <!--The button for chatbot-->
+    <div class="chat-container">
+        <div class="chat-button" onclick="toggleChat()">
+            🤖
+        </div>
+        <!--Chatbot itself-->
+        <div class="chat-popup" id="chatPopup">
+
+            <div class="chat-header">
+                <span>Apollo</span>
+
+            </div>
+
+            <div class="chat-body">
+
+                <div class="chatDisplay"></div>
+
+
+            </div>
+            <div class="chat-footer">
+                <textarea id="chatMessage" placeholder="Type your message"></textarea>
+                <button class="send-btn" onclick="sendMessage()">➤</button>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
 </body>
 </html>

@@ -288,6 +288,7 @@ button:disabled {
     cursor: pointer;
 }
 .chat-popup {
+    color: black;
     position: fixed;
     bottom: 80px;
     right: 20px;
@@ -304,6 +305,7 @@ button:disabled {
     display: flex;
     background: #194968;
     height: 70px;
+    color: white;
     /*vertically*/
     align-items: end;
     justify-content: left;
@@ -311,15 +313,69 @@ button:disabled {
     padding: 10px;
 }
 
-textarea {
+
+.chatDisplay {
+    font-size: 15px;
+    border-radius: 20px;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.chat-body{
+    flex-grow: 1;
+    height: 250px; /* Adjust based on textarea size */
+    overflow-y: auto; /* Enable scrolling */
+    padding: 10px;
+}
+
+.chat-footer{
+
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #194968;
+    justify-items: end;
+}
+
+
+.chat-footer textarea {
+    flex-grow: 1;
     width: 90%; /* Make it take most of the chat box width */
     height: 40px;
     resize: none;
     border-radius: 10px;
     outline: none;
     padding: 8px;
+
 }
 
+.send-btn {
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
 
+    top: 500px;
+}
+
+.user-message {
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    align-self: end;
+    background: #194968;
+}
+
+.apollo-message {
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    align-self: start;
+    background: #481968;
+}
 
 
