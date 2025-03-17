@@ -50,7 +50,29 @@
 </div>
 <footer>
     <p>© 2025 Warble. Warble Limited.</p>
-    <button id="themeToggle" onclick="toggleDarkMode()">🌙</button>
+
+    <!--The button for chatbot-->
+    <div class="chat-container">
+        <div class="chat-button" onclick="toggleChat()">
+            🤖
+        </div>
+        <!--Chatbot itself-->
+        <div class="chat-popup" id="chatPopup">
+
+            <div class="chat-header">
+                <span>Apollo</span>
+
+            </div>
+
+            <div class="chat-body">
+                <p>Hi! How can we help you?</p>
+                <textarea placeholder="Type your message..."></textarea>
+                <button class="send-btn">Send</button>
+            </div>
+
+        </div>
+    </div>
+
 </footer>
 </body>
 <script src="warble.js"></script>
