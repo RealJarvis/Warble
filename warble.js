@@ -90,6 +90,11 @@ nextButton.addEventListener("click", () => {
         optionsContainer.innerText = "";
         nextButton.style.display = "none";
         scoreText.textContent = `Your score: ${score} / ${questions.length}`;
+        setTimeout(() => {
+            toggleChat();
+            chatApollo(score);
+        }, 2000);
+
     }
 })
 
@@ -131,18 +136,40 @@ function chatApollo(usersMessage) {
     let apolloMessage = document.createElement("div");
     apolloMessage.classList.add("apollo-message");
 
-    if (usersMessage.toLowerCase() === "hello") {
+    soundofMessage();
 
-        apolloMessage.textContent = "Hello, how can I help you?";
-        chatDisplay.appendChild(apolloMessage);
-        autoScroll();
-    }else if (usersMessage.toLowerCase() === "dark mode") {
-        apolloMessage.textContent = "Light mode on✔️";
-        chatDisplay.appendChild(apolloMessage);
-        autoScroll();
-        toggleDarkMode();
+    if (typeof usersMessage === "number") {
+        console.log(usersMessage);
+        usersMessage = Number(usersMessage);
+        if (usersMessage < 3) {
+            apolloMessage.textContent = "I don't mean to offend, but someone is as dumb as a goat🙂";
+        }else if (usersMessage >= 3) {
+            apolloMessage.textContent = "You should work in NASA😎";
+        }
     }
 
+    else if (usersMessage.toLowerCase() === "hello") {
+        apolloMessage.textContent = "Hello, how can I help you?";
+    }else if (usersMessage.toLowerCase() === "dark mode") {
+        apolloMessage.textContent = "Light mode on✔️";
+        toggleDarkMode();
+    }else if (usersMessage.toLowerCase() === "tests") {
+        apolloMessage.textContent = "Brace yourself, we are going to English tests🫡";
+        setTimeout(() => {
+            window.location.href = "Test.html";
+        }, 4000);
+
+    }else if (usersMessage.toLowerCase() === "what can you do?") {
+        apolloMessage.textContent = "Well, not that much for now🤕";
+    }else if (usersMessage.toLowerCase() === "thanks") {
+        apolloMessage.textContent = "I'm always here to give you compliments🫡";
+    }
+    else {
+        apolloMessage.textContent = "I don't know how to reply to this message😭";
+
+    }
+    chatDisplay.appendChild(apolloMessage);
+    autoScroll();
 
 }
 // Function to force scrolling to the bottom
@@ -150,4 +177,9 @@ function autoScroll() {
     let chatBody = document.querySelector(".chat-body");
     chatBody.scrollTop = chatBody.scrollHeight;
 
+}
+
+function soundofMessage() {
+    let audio = new Audio("messsound.wav");
+    audio.play();
 }
