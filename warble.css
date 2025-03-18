@@ -1,14 +1,18 @@
 body {
+    height: 100%;
     margin: 0;
-    padding: 0;
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #2B2D42;
+
+    background: linear-gradient(135deg, #4b509e, #2B2D42);
     color: white;
     transition: background-color 2s ease;
 }
 
+
 #register {
     transition: 1s;
+    text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);;
 }
 #register:hover {
     transform: scale(1.1);
@@ -32,7 +36,8 @@ header {
     justify-content: space-between;
     padding: 5px 50px;
     align-items: center;
-    background-color: #3B3E5B;
+
+    background: linear-gradient(135deg, #4b509e, #2B2D42);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     transition: background-color 2s ease;
 }
@@ -73,6 +78,7 @@ nav ul li a:hover {
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
+
 }
 
 img.mainimg {
@@ -80,6 +86,7 @@ img.mainimg {
     height: 300px;
 }
 .container {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +94,7 @@ img.mainimg {
 }
 .card{
     display: flex;
-    background-color: #3B3E5B;
+    background: linear-gradient(135deg,#2B2D42, #4b509e);
     padding: 40px;
     text-align: center;
     border-radius: 10px;
@@ -112,6 +119,7 @@ form {
     margin-left: 6px;
     border: none;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 form input::placeholder {
@@ -120,8 +128,7 @@ form input::placeholder {
 }
 
 button {
-
-    background-color: #5727A0;
+    background-color: #4f1aa5;
     border-radius: 5px;
     color: white;
     margin-top: 70px;
@@ -131,6 +138,7 @@ button {
     cursor: pointer;
     margin-left: 6px;
     border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 button:hover {
     background: #6A2CB9;
@@ -146,12 +154,16 @@ button:hover {
 
 footer {
     display: flex;
-    justify-content: space-between;
+    align-self: center;
+    justify-self: center;
+
     flex-direction: row;
     text-align: center;
     bottom: 0;
-    position: fixed;
+    position: relative;
     width: 100%;
+    background: transparent;
+
 }
 #themeToggle {
     display: flex;
@@ -164,15 +176,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vh;
-    background-color: #2B2D42;
+    height: 86.9vh;
+    background: linear-gradient(135deg,#4b509e, #2B2D42);
     color: white;
+
 
 
 }
 
 .testtext {
     background: #536C80;
+    background: linear-gradient(135deg,#2B2D42, #4b509e);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -238,15 +252,17 @@ button:disabled {
 #slidebar {
     width: 150px;
     height: calc(100vh - 60px); /* Subtract the navbar height */
-    background-color: #2a2d3e;
+    background: linear-gradient(180deg, #2a2a72, #3b5998);
     position: fixed;
     top: 92px; /* Adjust to the same height as the navbar */
     left: 0;
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+
     transition: transform 0.8s;
     list-style: none;
+
 }
+
 
 #slidebar li {
     color: white;
@@ -258,6 +274,10 @@ button:disabled {
     border-radius: 5px;
     transition: background 0.3s ease-in-out;
 }
+#slidebar li:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+}
 #slidebar-emoji{
     -ms-text-size-adjust: 150%;
 }
@@ -266,6 +286,7 @@ button:disabled {
     transition: 2s;
     cursor: pointer;
 }
+
 
 .chat-button {
     background: #194968;
@@ -293,8 +314,9 @@ button:disabled {
     bottom: 100px;
     right: 20px;
     width: 300px;
-    background: white;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(18, 18, 18, 0.4); /* More transparency */
+    backdrop-filter: blur(8px);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
     display: none;
@@ -303,9 +325,10 @@ button:disabled {
 
 .chat-header{
     display: flex;
-    background: #194968;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
     height: 70px;
     color: white;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
     /*vertically*/
     align-items: end;
     justify-content: left;
@@ -333,24 +356,24 @@ button:disabled {
 }
 
 .chat-footer{
-
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
     height: 80px;
     display: flex;
     align-items: center;
     padding: 10px;
-    background: #194968;
-    justify-items: end;
+    justify-content: space-between;
 }
 
 
 .chat-footer textarea {
-    flex-grow: 1;
+    flex: 1;
+
     width: 90%; /* Make it take most of the chat box width */
     height: 40px;
     resize: none;
     border-radius: 10px;
     outline: none;
-    padding: 8px;
+    padding: 10px;
 
 }
 
@@ -358,24 +381,54 @@ button:disabled {
     display: flex;
     border-radius: 50%;
     align-items: center;
+    padding: 10px;
+    margin-left: 10px;
+    align-self: center;
+    justify-content: center;
+    height: 45px; /* Ensures it's the same height as textarea */
+    width: 45px;
+    margin-bottom: 70px;
+    background-color: #2B2D42;
+}
 
-    top: 500px;
+.send-btn:hover {
+
+    background-color: #3f4260;
 }
 
 .user-message {
+    word-wrap: break-word;
     border-radius: 15px;
     padding: 10px;
-    color: black;
+    color: white;
     align-self: end;
-    background: #9B59B6;
+    animation: fadeIn 0.3s ease-in-out;
+    background: linear-gradient(135deg, #4a00e0, #8e2de2);
+    box-shadow: 0 0 10px rgba(2, 0, 0, 0.5);
 }
 
 .apollo-message {
     border-radius: 15px;
     padding: 10px;
-    color: black;
+    color: white;
     align-self: start;
-    background: #5DADE2;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    animation: fadeIn 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* ⏳ Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.creating-container {
+    margin-left: 195px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 

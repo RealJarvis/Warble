@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Tests</title>
+  <link rel="stylesheet" href="warble.css">
+  <link rel="icon" href="icon.png">
+</head>
+<body>
+<header>
+  <h1 id="register"><a href="warble.html">Warble</a></h1>
+  <nav>
+    <ul>
+      <li><a>My lessons</a></li>
+      <li><a href="Test.html">Tests</a></li>
+      <li><a href="words.html">Words</a></li>
+    </ul>
+    <div class="flags">
+      <img style="width: 20px; height: 20px" src="gbflag.png" alt="ua">
+      <img style="width: 20px; height: 20px" src="uaflag.png" alt="gb">
+    </div>
+  </nav>
+</header>
+<div id="slidebar">
+
+  <h1>Studio</h1>
+  <ul>
+    <li><a href="#">Teacher account</a></li>
+    <li><a href="createTest.html">Create Test</a><p id="slidebar-emoji">➕</p></li>
+    <li><a href="#">Tests</a></li>
+    <li><a href="#">Words</a></li>
+    <li><a href="#">Settings</a></li>
+    <li><a href="#">Logout</a></li>
+  </ul>
+</div>
+
+<div class="creating-container">
+  <h1>Create Test</h1>
+</div>
+
+<footer>
+
+  <!--The button for chatbot-->
+  <div class="chat-container">
+    <div class="chat-button" onclick="toggleChat()">
+      🤖
+    </div>
+    <!--Chatbot itself-->
+    <div class="chat-popup" id="chatPopup">
+
+      <div class="chat-header">
+        <span>Apollo</span>
+
+      </div>
+
+      <div class="chat-body">
+
+        <div class="chatDisplay"></div>
+
+
+      </div>
+      <div class="chat-footer">
+        <textarea id="chatMessage" placeholder="Type your message"></textarea>
+        <button class="send-btn" onclick="sendMessage()">➤</button>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

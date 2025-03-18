@@ -110,23 +110,29 @@ function toggleChat() {
 }
 
 function sendMessage() {
-    let message = document.getElementById("chatMessage").value;
-    // preventing sending an empty message
-    if (message === "") {return}
-    console.log("Message detected --> " + message);
 
-    let chatDisplay = document.querySelector(".chatDisplay");
-    let newMessage = document.createElement("div");
-    newMessage.classList.add("user-message");
+        let message = document.getElementById("chatMessage").value;
+        // preventing sending an empty message
+        if (message === "") {
+            return
+        }
+        console.log("Message detected --> " + message);
 
-    newMessage.textContent = message; // set the text
+        let chatDisplay = document.querySelector(".chatDisplay");
+        let newMessage = document.createElement("div");
+        newMessage.classList.add("user-message");
 
-    chatDisplay.appendChild(newMessage);
+        newMessage.textContent = message; // set the text
 
-    document.getElementById("chatMessage").value = "";
-    autoScroll();
+        chatDisplay.appendChild(newMessage);
 
-    setTimeout( () => {chatApollo(message)}, 1000);
+        document.getElementById("chatMessage").value = "";
+        autoScroll();
+
+        setTimeout(() => {
+            chatApollo(message)
+        }, 1000);
+
 
 }
 
