@@ -1,3 +1,19 @@
+window.onload = function() {
+    console.log(window.location.href);
+    if (window.location.href.includes("createTest.html")) {
+
+        setTimeout( () => {
+            toggleChat();
+            chatApollo("createMessage")}, 1000);
+    }else if (window.location.href.includes("Test.html")) {
+
+        setTimeout( () => {
+            toggleChat();
+            chatApollo("quizMessage")}, 1000);
+    }
+}
+
+
 function toggleDarkMode() {
     document.body.style.backgroundColor = "#cce0ff";
     document.body.style.color = "black";
@@ -91,7 +107,7 @@ nextButton.addEventListener("click", () => {
         nextButton.style.display = "none";
         scoreText.textContent = `Your score: ${score} / ${questions.length}`;
         setTimeout(() => {
-            toggleChat();
+            
             chatApollo(score);
         }, 2000);
 
@@ -153,22 +169,32 @@ function chatApollo(usersMessage) {
             apolloMessage.textContent = "You should work in NASA😎";
         }
     }
+    else if (usersMessage.toLowerCase().includes("createmessage")) {
+        apolloMessage.textContent = "I can help you creating your own test! Let me know if there is anything you need😉";
+    } else if (usersMessage.toLowerCase().includes("quizmessage")) {
+        apolloMessage.textContent = "This quiz is made for B2 level speakers, so pay attention🙂";
+    }
 
-    else if (usersMessage.toLowerCase() === "hello") {
+    else if (usersMessage.toLowerCase().includes("hello")) {
         apolloMessage.textContent = "Hello, how can I help you?";
-    }else if (usersMessage.toLowerCase() === "dark mode") {
-        apolloMessage.textContent = "Light mode on✔️";
-        toggleDarkMode();
-    }else if (usersMessage.toLowerCase() === "tests") {
+    }else if (usersMessage.toLowerCase().includes("light mode")) {
+        apolloMessage.textContent = "Unfortunately light mode is not available:(";
+        //toggleDarkMode();
+    }else if (usersMessage.toLowerCase().includes("tests")) {
         apolloMessage.textContent = "Brace yourself, we are going to English tests🫡";
         setTimeout(() => {
             window.location.href = "Test.html";
         }, 4000);
 
-    }else if (usersMessage.toLowerCase() === "what can you do?") {
+    }else if (usersMessage.toLowerCase().includes("what can you do?")) {
         apolloMessage.textContent = "Well, not that much for now🤕";
-    }else if (usersMessage.toLowerCase() === "thanks") {
+    }else if (usersMessage.toLowerCase().includes("thank")) {
         apolloMessage.textContent = "I'm always here to give you compliments🫡";
+    }
+    else if (usersMessage.toLowerCase().includes("your name")) {
+        apolloMessage.textContent = "My name is Apollo, I am your personal tutor, and will guide you on the way of developing your English skills🫡";
+    }else if (usersMessage.toLowerCase().includes("how are you")) {
+        apolloMessage.textContent = "I am doing just great!";
     }
     else {
         apolloMessage.textContent = "I don't know how to reply to this message😭";
@@ -189,3 +215,6 @@ function soundofMessage() {
     let audio = new Audio("messsound.wav");
     audio.play();
 }
+
+
+

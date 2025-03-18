@@ -6,7 +6,9 @@
   <title>Tests</title>
   <link rel="stylesheet" href="warble.css">
   <link rel="icon" href="icon.png">
+  <script src="warble.js"></script>
 </head>
+
 <body>
 <header>
   <h1 id="register"><a href="warble.html">Warble</a></h1>
@@ -28,16 +30,46 @@
   <ul>
     <li><a href="#">Teacher account</a></li>
     <li><a href="createTest.html">Create Test</a><p id="slidebar-emoji">➕</p></li>
-    <li><a href="#">Tests</a></li>
+    <li><a href="Test.html">Tests</a></li>
     <li><a href="#">Words</a></li>
     <li><a href="#">Settings</a></li>
     <li><a href="#">Logout</a></li>
   </ul>
 </div>
 
-<div class="creating-container">
-  <h1>Create Test</h1>
+<div class="test-creation-card">
+  <h2>Create a New Test</h2>
+  <div class="form-box">
+  <label>Test Name:</label>
+      <input type="text" />
+  </div>
+  <div class="form-box">
+  <label>Test Type:</label>
+
+    <select>
+      <option>Time Quiz</option>
+      <option>Fill in the Blanks</option>
+      <option>True or False</option>
+      <option>Multiple choices</option>
+    </select>
+  </div>
+  <div class="form-box">
+  <label>English Level:</label>
+
+    <select>
+      <option>A1</option>
+      <option>A2</option>
+      <option>B1</option>
+      <option>B2</option>
+      <option>C1</option>
+      <option>C2</option>
+    </select>
+  </div>
+
+  <button class="create-test-btn">Create Test</button>
+
 </div>
+
 
 <footer>
 
@@ -70,4 +102,5 @@
 </footer>
 
 </body>
+<script src="warble.js"></script>
 </html>
