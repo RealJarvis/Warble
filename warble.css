@@ -90,7 +90,7 @@ img.mainimg {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 79.5vh;
 }
 .card{
     display: flex;
@@ -493,6 +493,39 @@ button:disabled {
     background: rgba(255, 255, 255, 0.2);
     border: none;
     outline: none;
+
+}
+
+.start-button {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.start-button:hover {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    transform: scale(1.05);
+}
+
+#timer-container {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 130px;
+}
+
+.header-quiz {
+    display: flex;
+    justify-content: space-between;
 
 }
 

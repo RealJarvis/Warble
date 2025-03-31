@@ -10,9 +10,46 @@ window.onload = function() {
         setTimeout( () => {
             toggleChat();
             chatApollo("quizMessage")}, 1000);
+    }else if (window.location.href.includes("dashboard.html")) {
+
+        setTimeout( () => {
+            toggleChat();
+            chatApollo("dashboard")}, 1000);
     }
 }
 
+let timeLeft = 10;
+// variable to store interval
+let timeInterval = null;
+
+function startTimer() {
+    if (timeInterval) {
+        clearInterval(timeInterval);
+    }
+    // reseting the timer
+    timeLeft = 10;
+
+    document.getElementById("timer").textContent = timeLeft;
+
+    // seting interval
+    timeInterval = setInterval(() => {
+        timeLeft--;
+        document.getElementById("timer").textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(timeInterval);
+            alert("Time's up!");
+            nextQuestion();
+        }
+    }, 1000);
+}
+
+function nextQuestion() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        loadQuestions();
+    }else {}
+}
 
 function toggleDarkMode() {
     document.body.style.backgroundColor = "#cce0ff";
@@ -67,21 +104,47 @@ const nextButton = document.getElementById("next-btn");
 const scoreText = document.getElementById("score-text");
 
 function loadQuestions() {
-   nextButton.disabled = true;
-   // inheriting the slot for question
-    optionsContainer.innerText = "";
-    // displays the current text
+    nextButton.disabled = true;
+    optionsContainer.innerHTML = ""; // Clear previous content
+
+    if (currentQuestionIndex === 0) {
+        // Only create the "Start the Quiz" button if it's the first question
+        let startButton = document.createElement("button");
+        startButton.textContent = "Start the Quiz";
+        startButton.classList.add("start-button");
+
+        startButton.addEventListener("click", () => {
+            optionsContainer.innerHTML = ""; // Remove the start button
+            displayQuestion();
+            startTimer();
+        });
+
+        optionsContainer.appendChild(startButton);
+    } else {
+        // If the quiz has started, load the question directly
+        displayQuestion();
+    }
+}
+
+// Function to display questions after clicking "Start the Quiz"
+function displayQuestion() {
     let currentQuestion = questions[currentQuestionIndex];
 
     questionText.textContent = currentQuestion.question;
+    optionsContainer.innerHTML = ""; // Clear options before displaying new ones
+
     currentQuestion.options.forEach((option) => {
         let button = document.createElement("button");
         button.textContent = option;
         button.classList.add("option");
-        button.addEventListener("click", () => {selectQuestion(button, currentQuestion.correctAnswer);});
+        button.addEventListener("click", () => {
+            selectQuestion(button, currentQuestion.correctAnswer);
+        });
         optionsContainer.appendChild(button);
-    })
+    });
+    startTimer();
 }
+
 
 function selectQuestion(button, correctAnswer) {
     const option = document.querySelectorAll(".option");
@@ -102,12 +165,14 @@ nextButton.addEventListener("click", () => {
     if (currentQuestionIndex < questions.length) {
         loadQuestions();
     }else {
+
+        clearInterval(timeInterval);
         questionText.textContent = "Quiz finished!";
         optionsContainer.innerText = "";
         nextButton.style.display = "none";
         scoreText.textContent = `Your score: ${score} / ${questions.length}`;
         setTimeout(() => {
-            
+
             chatApollo(score);
         }, 2000);
 
@@ -168,6 +233,8 @@ function chatApollo(usersMessage) {
         }else if (usersMessage >= 3) {
             apolloMessage.textContent = "You should work in NASA😎";
         }
+    }else if (usersMessage.toLowerCase().includes("dashboard")) {
+        apolloMessage.textContent = "Here you can book the lessons with the tutor Ihor, please select the dates that are convenient for you";
     }
     else if (usersMessage.toLowerCase().includes("createmessage")) {
         apolloMessage.textContent = "I can help you creating your own test! Let me know if there is anything you need😉";
@@ -215,6 +282,9 @@ function soundofMessage() {
     let audio = new Audio("messsound.wav");
     audio.play();
 }
+
+
+
 
 
 
