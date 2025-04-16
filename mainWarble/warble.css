@@ -1,0 +1,651 @@
+/* === GLOBAL COLORS === */
+:root {
+    --primary-gradient: linear-gradient(270deg, #00ffe7, #6a00f4, #ff00c8);
+    --primary-color: #6a00f4;
+    --secondary-accent: #ff8c00; /* Sunset Orange */
+    --success-glow: #00ffc8;
+    --danger-glow: #ff3c78;
+    --background-dark: #1a1a2e;
+    --background-light: #162447;
+    --text-light: #f8f8f8;
+    --text-secondary: #cccccc;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background: var(--background-dark);
+    color: var(--text-light);
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle, #1a1a2e 0%, #162447 100%);
+    transition: background 0.5s ease;
+}
+
+h1, h2, h3 {
+    background: color(var(--text-light));
+
+
+}
+
+
+#register {
+    transition: 1s;
+    text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);;
+}
+#register:hover {
+    transform: scale(1.1);
+    color: #6A2CB9;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 50px;
+    align-items: center;
+
+    background: linear-gradient(135deg, #4b509e, #2B2D42);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 2s ease;
+}
+nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    display: inline;
+    color: white;
+    font-size: 20px;
+
+}
+.flags  {
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+nav ul li a:hover {
+    color: #72A0FF;
+    cursor: pointer;
+    transition: color 1s ;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+img.mainimg {
+    width: 300px;
+    height: 300px;
+}
+.container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 79.5vh;
+}
+.card{
+    display: flex;
+    background: linear-gradient(135deg,#2B2D42, #4b509e);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    gap: 20px;
+}
+.input-group input, form input {
+    color: white;
+    background: #536C80;
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 10px;
+    margin-right: 6px;
+    margin-left: 6px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+form input::placeholder {
+    color: #ddd;
+
+}
+
+button {
+    background-color: #4f1aa5;
+    border-radius: 5px;
+    color: white;
+    margin-top: 70px;
+    font-size: 16px;
+    padding: 16px;
+    transition: 1s;
+    cursor: pointer;
+    margin-left: 6px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+button:hover {
+    background: #6A2CB9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.mainimg {
+    width: 300px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+}
+
+footer {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+
+    flex-direction: row;
+    text-align: center;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    background: transparent;
+
+}
+#themeToggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+}
+
+.test {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 86.9vh;
+    background: var(--background-dark);
+    color: white;
+
+
+
+}
+
+.testtext {
+    background: #536C80;
+    background: linear-gradient(135deg,#2B2D42, #4b509e);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 500px; /* Limit width */
+
+}
+
+.quiz-container {
+    background: #cccccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+#question-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    background-color: #3B3E5B;
+}
+
+#next-btn {
+    height: 10%;
+    padding: 10px;
+    width: 50%;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+button:disabled {
+    color: #2B2D42;
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.options-container {
+    display: block;
+    background: lightgray;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option.correct {
+    background: lightgreen;
+}
+
+.option.wrong {
+    background: lightcoral;
+}
+
+#slidebar {
+    width: 150px;
+    height: calc(100vh - 60px); /* Subtract the navbar height */
+    background: linear-gradient(180deg, #2a2a72, #3b5998);
+    position: fixed;
+    top: 92px; /* Adjust to the same height as the navbar */
+    left: 0;
+    padding: 20px;
+
+    transition: transform 0.8s;
+    list-style: none;
+
+}
+
+
+#slidebar li {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+#slidebar li:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+#slidebar-emoji{
+    -ms-text-size-adjust: 150%;
+}
+#slidebar-emoji:hover {
+    transform: rotate(180deg);
+    transition: 2s;
+    cursor: pointer;
+}
+
+
+.chat-button {
+    background: #194968;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    font-size: 24px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+}
+
+.chat-button:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+.chat-popup {
+    color: black;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    background: rgba(18, 18, 18, 0.4); /* More transparency */
+    backdrop-filter: blur(8px);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+
+}
+
+.chat-header{
+    display: flex;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    height: 70px;
+    color: white;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    /*vertically*/
+    align-items: end;
+    justify-content: left;
+    font-size: 24px;
+    padding: 10px;
+}
+
+
+.chatDisplay {
+    font-size: 13px;
+    border-radius: 20px;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.chat-body{
+    flex-grow: 1;
+    height: 250px; /* Adjust based on textarea size */
+    overflow-y: auto; /* Enable scrolling */
+    padding: 10px;
+}
+
+.chat-footer{
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+
+.chat-footer textarea {
+    flex: 1;
+
+    width: 90%; /* Make it take most of the chat box width */
+    height: 40px;
+    resize: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+
+}
+
+.send-btn {
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    padding: 10px;
+    margin-left: 10px;
+    align-self: center;
+    justify-content: center;
+    height: 45px; /* Ensures it's the same height as textarea */
+    width: 45px;
+    margin-bottom: 70px;
+    background-color: #2B2D42;
+}
+
+.send-btn:hover {
+
+    background-color: #3f4260;
+}
+
+.user-message {
+    word-wrap: break-word;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    align-self: end;
+    animation: fadeIn 0.3s ease-in-out;
+    background: linear-gradient(135deg, #4a00e0, #8e2de2);
+    box-shadow: 0 0 10px rgba(2, 0, 0, 0.5);
+}
+
+.apollo-message {
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    align-self: start;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    animation: fadeIn 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* ⏳ Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.test-creation-card {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    margin: 108px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    width: 50%;
+
+    box-shadow: 0 0 4px rgba(0, 255, 255, 0.5);
+    text-align: center;
+}
+
+.test-creation-card h2 {
+    color: white;
+    font-size: 22px;
+}
+
+.test-creation-card input, .test-creation-card select {
+    width: 40%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: black;
+}
+
+
+.create-test-btn {
+    background: linear-gradient(45deg, cyan, blue);
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.create-test-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, blue, cyan);
+}
+
+.form-box {
+    display: flex;
+    align-items: center;
+
+}
+
+.form-box label {
+    flex: 1; /* Allows labels to take equal space */
+    text-align: left; /* Aligns labels to the left */
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.form-box input, .form-box select {
+    flex: 2; /* Inputs take more space */
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+
+}
+
+.start-button {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.start-button:hover {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    transform: scale(1.05);
+}
+
+#timer-container {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 130px;
+}
+
+.header-quiz {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.leadershipBoard {
+
+    color: black;
+    position: fixed;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px;
+
+    border-radius: 10px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    backdrop-filter: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.retryButton {
+    margin: 0;
+
+    --speed: 1s;
+    align-self: center;
+    grid-column: 1/-1;
+    justify-self: center;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(270deg, #6a00f4, #ff00c8, #00ffe7);
+    background-size: 600% 600%;
+    animation: gradientShine var(--speed) ease infinite;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.likeButton {
+    justify-self: center;
+    margin: 20px 0 0;
+
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+
+}
+
+.dislikeButton {
+    justify-self: center;
+    margin: 0;
+
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+
+}
+
+.actionContainer {
+    display: flex;
+}
+
+.likeButton:focus {
+    outline: none;
+    box-shadow: none;
+}
+.dislikeButton:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+.retryButton:hover {
+    --speed: 1s;
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.8), 0 0 60px rgba(255, 0, 255, 0.4);
+    background: linear-gradient(270deg, #00ffe7 , #ff00c8, #6a00f4);
+    animation: gradientShine var(--speed) ease infinite, shake 0.3s infinite;
+}
+
+@keyframes gradientShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes shake {
+    0% { transform: translate(0px, 0px) scale(1.08); }
+    25% { transform: translate(2px, -2px) scale(1.08); }
+    50% { transform: translate(-2px, 2px) scale(1.08); }
+    75% { transform: translate(2px, 2px) scale(1.08); }
+    100% { transform: translate(-2px, -2px) scale(1.08); }
+}
+
+
+

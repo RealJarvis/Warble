@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../mainWarble/warble.css">
+  <link rel="stylesheet" href="profile.css">
+    <meta charset="UTF-8">
+    <title>Profile</title>
+  <link rel="icon" href="../resources/icon.png">
+</head>
+<body class="dark-mode">
+<header>
+  <h1 id="register"><a href="../mainWarble/warble.html">Warble</a></h1>
+  <nav>
+    <ul>
+      <li><a href="../dashboardWarble/dashboard.html">Dashboard✅</a></li>
+      <li><a href="../scrollerWarble/Test.html">Education💡</a></li>
+      <li><a href="../scrollerWarble/competition.html">Competition🌍</a></li>
+      <li><a href="../priceWarble/packages.html">Prices🏷️</a></li>
+      <li><a href="profile.html">Profile👤</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="user-profile">
+  <div class="profile-image">
+    <img src="../resources/user-avatar.png" alt="User Avatar">
+  </div>
+
+  <div class="profile-details">
+    <div class="profile-info">Name: Ihor</div>
+    <div class="user-status">Status: Passive Voice obliterator ✅</div>
+    <div class="profile-lvl">Level: Pre-Architect</div>
+    <div class="user-league">League: 🥇 Gold League</div>
+    <div class="tests-passed">Tests finished: 1554</div>
+    <div class="user-xp">XP: 1540 XP</div>
+  </div>
+</div>
+
+
+<footer>
+
+  <p>© 2025 Warble. Warble Limited.</p>
+  <!--The button for chatbot-->
+  <div class="chat-container">
+    <div class="chat-button" onclick="toggleChat()">
+      🤖
+    </div>
+    <!--Chatbot itself-->
+    <div class="chat-popup" id="chatPopup">
+
+      <div class="chat-header">
+        <span>Apollo</span>
+
+      </div>
+
+      <div class="chat-body">
+
+        <div class="chatDisplay"></div>
+
+
+      </div>
+      <div class="chat-footer">
+        <textarea id="chatMessage" placeholder="Type your message"></textarea>
+        <button class="send-btn" onclick="sendMessage()">➤</button>
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

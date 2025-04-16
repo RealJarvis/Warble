@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Tests</title>
+  <link rel="stylesheet" href="../mainWarble/warble.css">
+  <link rel="icon" href="../resources/icon.png">
+  <script src="../mainWarble/warble.js"></script>
+</head>
+
+<body>
+<header>
+  <h1 id="register"><a href="../mainWarble/warble.html">Warble</a></h1>
+  <nav>
+    <ul>
+      <li><a href="../dashboardWarble/dashboard.html">Dashboard✅</a></li>
+      <li><a href="../scrollerWarble/Test.html">Education💡</a></li>
+      <li><a href="../scrollerWarble/competition.html">Competition🌍</a></li>
+      <li><a href="../priceWarble/packages.html">Prices🏷️</a></li>
+      <li><a href="../profileWarble/profile.html">Profile👤</a></li>
+    </ul>
+  </nav>
+</header>
+<div id="slidebar">
+
+  <h1>Studio</h1>
+  <ul>
+    <li><a href="#">Teacher account</a></li>
+    <li><a href="createTest.html">Create Test</a><p id="slidebar-emoji">➕</p></li>
+    <li><a href="../scrollerWarble/Test.html">Tests</a></li>
+    <li><a href="#">Words</a></li>
+    <li><a href="#">Settings</a></li>
+    <li><a href="#">Logout</a></li>
+  </ul>
+</div>
+
+<div class="test-creation-card">
+  <h2>Create a New Test</h2>
+  <div class="form-box">
+  <label>Test Name:</label>
+      <input type="text" />
+  </div>
+  <div class="form-box">
+  <label>Test Type:</label>
+
+    <select>
+      <option>Time Quiz</option>
+      <option>Context learning</option>
+      <option>Fill in the Blanks</option>
+      <option>True or False</option>
+
+      <option>Multiple choices</option>
+    </select>
+  </div>
+  <div class="form-box">
+  <label>English Level:</label>
+
+    <select>
+      <option>A1</option>
+      <option>A2</option>
+      <option>B1</option>
+      <option>B2</option>
+      <option>C1</option>
+      <option>C2</option>
+    </select>
+  </div>
+
+  <button class="create-test-btn">Create Test</button>
+
+</div>
+
+
+<footer>
+
+  <!--The button for chatbot-->
+  <div class="chat-container">
+    <div class="chat-button" onclick="toggleChat()">
+      🤖
+    </div>
+    <!--Chatbot itself-->
+    <div class="chat-popup" id="chatPopup">
+
+      <div class="chat-header">
+        <span>Apollo</span>
+
+      </div>
+
+      <div class="chat-body">
+
+        <div class="chatDisplay"></div>
+
+
+      </div>
+      <div class="chat-footer">
+        <textarea id="chatMessage" placeholder="Type your message"></textarea>
+        <button class="send-btn" onclick="sendMessage()">➤</button>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+</body>
+<script src="database-saver.js"></script>
+<script src="../mainWarble/warble.js"></script>
+</html>

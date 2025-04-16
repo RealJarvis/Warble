@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../mainWarble/warble.css">
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="icon" href="../resources/icon.png">
+
+</head>
+<body>
+<header>
+    <h1 id="register"><a href="../mainWarble/warble.html">Warble</a></h1>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard✅</a></li>
+            <li><a href="../scrollerWarble/Test.html">Education💡</a></li>
+            <li><a href="../scrollerWarble/competition.html">Competition🌍</a></li>
+            <li><a href="../priceWarble/packages.html">Prices🏷️</a></li>
+            <li><a href="../profileWarble/profile.html">Profile👤</a></li>
+        </ul>
+    </nav>
+</header>
+
+<link rel="stylesheet" href="dashboardStyle.css">
+
+<div id="day-booking">
+    <div class="booking-container"></div>
+    <div class="booking-title"></div>
+    <div class="user-name"></div>
+    <div class="user-email"></div>
+    <div class="confirm-button"></div>
+
+</div>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+    emailjs.init('dCQHbz7K0IO7-A_Xw')
+</script>
+
+<div class="calendar">
+
+
+    <div id="calendar-header">
+        <button id="prev">←</button>
+        <h2 id="monthYear"></h2>
+        <button id="next">→</button>
+    </div>
+
+
+    <div id="calendar-days">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+    </div>
+    <div class="calendar-dates" id="dates"></div>
+</div>
+
+<footer>
+    <p>© 2025 Warble. Warble Limited.</p>
+    <!--The button for chatbot-->
+    <div class="chat-container">
+        <div class="chat-button" onclick="toggleChat()">
+            🤖
+        </div>
+        <!--Chatbot itself-->
+        <div class="chat-popup" id="chatPopup">
+
+            <div class="chat-header">
+                <span>Apollo</span>
+
+            </div>
+
+            <div class="chat-body">
+
+                <div class="chatDisplay"></div>
+
+
+            </div>
+            <div class="chat-footer">
+                <textarea id="chatMessage" placeholder="Type your message"></textarea>
+                <button class="send-btn" onclick="sendMessage()">➤</button>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+</body>
+<script src="../mainWarble/warble.js"></script>
+<script src="dashboardcode.js"></script>
+</html>

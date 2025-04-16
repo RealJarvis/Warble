@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Tests</title>
+  <link rel="stylesheet" href="../mainWarble/warble.css">
+  <link rel="stylesheet" href="questionsPage.css">
+  <link rel="icon" href="../resources/icon.png">
+  <script src="../mainWarble/warble.js"></script>
+</head>
+
+<body>
+<header>
+  <h1 id="register"><a href="../mainWarble/warble.html">Warble</a></h1>
+  <nav>
+    <ul>
+      <li><a href="../dashboardWarble/dashboard.html">Dashboard✅</a></li>
+      <li><a href="../scrollerWarble/Test.html">Education💡</a></li>
+      <li><a href="../scrollerWarble/competition.html">Competition🌍</a></li>
+      <li><a href="../priceWarble/packages.html">Prices🏷️</a></li>
+      <li><a href="../profileWarble/profile.html">Profile👤</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="slidebarQues">
+
+  <h2>Add Questions to Your Test</h2>
+
+  <div id="questions-container">
+    <div class="question-block">
+      <input type="text" placeholder="Enter question" class="question-input" />
+
+      <input type="text" placeholder="Option 1" class="option-input" />
+      <input type="text" placeholder="Option 2" class="option-input" />
+      <input type="text" placeholder="Option 3" class="option-input" />
+
+      <input type="text" placeholder="Correct answer" class="correct-answer-input" />
+    </div>
+  </div>
+
+  <button onclick="addQuestion()">Add Another Question</button>
+  <button onclick="saveQuestions()">Save Questions</button>
+
+  <script src="questionsPage.js"></script>
+
+
+<footer>
+
+  <!--The button for chatbot-->
+  <div class="chat-container">
+    <div class="chat-button" onclick="toggleChat()">
+      🤖
+    </div>
+    <!--Chatbot itself-->
+    <div class="chat-popup" id="chatPopup">
+
+      <div class="chat-header">
+        <span>Apollo</span>
+
+      </div>
+
+      <div class="chat-body">
+
+        <div class="chatDisplay"></div>
+
+
+      </div>
+      <div class="chat-footer">
+        <textarea id="chatMessage" placeholder="Type your message"></textarea>
+        <button class="send-btn" onclick="sendMessage()">➤</button>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+</body>
+<script src="database-saver.js"></script>
+<script src="../mainWarble/warble.js"></script>
+</html>

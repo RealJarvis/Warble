@@ -1,0 +1,89 @@
+.warble-packages{
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 130px;
+    justify-content: center;
+    gap: 60px;
+    height: 352px;
+    font-family: "Arial Black", serif;
+    color: #1a1a2e;
+}
+
+p {
+    color: rgba(4, 13, 37, 0.9);
+}
+
+.warble-minimum {
+    padding : 10px;
+    background: linear-gradient(135deg, #58c7f3, #00b4ff);
+
+    height: 125%;
+    box-shadow: 0 0 30px rgba(2, 0, 0, 0.5);
+    border-radius: 15px;
+    text-align: center;
+    gap: 100px;
+
+}
+.warble-minimum:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+.warble-middle {
+    padding : 10px;
+    background: linear-gradient(135deg, #ff9900, #007bff);
+    text-align: center;
+    height: 125%;
+    box-shadow: 0 0 30px rgba(2, 0, 0, 0.5);
+    border-radius: 15px;
+    transform: scale(1.1);
+
+}
+.warble-middle:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+.warble-maximum {
+    padding: 10px;
+    background: linear-gradient(135deg, #ff5e62, #2c2b4e);
+    text-align: center;
+    height: 125%;
+    box-shadow: 0 0 30px rgba(2, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.warble-maximum:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.warble-minimum, .warble-middle, .warble-maximum {
+    backdrop-filter: blur(10px);
+
+}
+
+.package-image {
+
+    width: 200px;
+    height: 200px;
+}
+
+.package-btn {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background 0.3s ease;
+}
+
+.package-btn:hover {
+    background: linear-gradient(135deg,#0072ff , #00c6ff);
+    cursor: pointer;
+}
+

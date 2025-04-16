@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="warble.css">
+    <meta charset="UTF-8">
+    <title>Warble</title>
+    <link rel="icon" href="../resources/icon.png">
+</head>
+<body>
+<header>
+    <h1 id="register"><a href="warble.html">Warble</a></h1>
+    <nav>
+        <ul>
+            <li><a href="../dashboardWarble/dashboard.html">Dashboard✅</a></li>
+            <li><a href="../scrollerWarble/Test.html">Education💡</a></li>
+            <li><a href="../scrollerWarble/competition.html">Competition🌍</a></li>
+            <li><a href="../priceWarble/packages.html">Prices🏷️</a></li>
+            <li><a href="../profileWarble/profile.html">Profile👤</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <div class="card">
+        <img src="../resources/logo.webp" alt="Warble Logo" class="mainimg">
+
+        <form>
+            <div class="input-group">
+                <label>
+                    <input type="text" style="color: white" placeholder="Name">
+                </label>
+                <label>
+                    <input type="text" placeholder="Surname">
+                </label>
+            </div>
+            <label>
+                <input type="email" placeholder="Email">
+            </label>
+            <label>
+                <input type="password" placeholder="Password">
+            </label>
+            <label>
+                <input type="password" placeholder="Confirm password">
+            </label>
+            
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+</div>
+<footer>
+    <p>© 2025 Warble. Warble Limited.</p>
+
+    <!--The button for chatbot-->
+    <div class="chat-container">
+        <div class="chat-button" onclick="toggleChat()">
+            🤖
+        </div>
+        <!--Chatbot itself-->
+        <div class="chat-popup" id="chatPopup">
+
+            <div class="chat-header">
+                <span>Apollo</span>
+
+            </div>
+
+            <div class="chat-body">
+
+                <div class="chatDisplay"></div>
+
+
+            </div>
+            <div class="chat-footer">
+                <textarea id="chatMessage" placeholder="Type your message"></textarea>
+                <button class="send-btn" onclick="sendMessage()">➤</button>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+</body>
+<script src="warble.js"></script>
+</html>

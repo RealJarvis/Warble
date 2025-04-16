@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../mainWarble/warble.css">
+  <link rel="stylesheet" href="packages.css">
+  <meta charset="UTF-8">
+  <title>Words learning</title>
+  <link rel="icon" href="../resources/icon.png">
+</head>
+<body class="dark-mode">
+<header>
+  <h1 id="register"><a href="../mainWarble/warble.html">Warble</a></h1>
+  <nav>
+    <ul>
+      <li><a href="../dashboardWarble/dashboard.html">Dashboard✅</a></li>
+      <li><a href="../scrollerWarble/Test.html">Education💡</a></li>
+      <li><a href="../scrollerWarble/competition.html">Competition🌍</a></li>
+      <li><a href="packages.html">Prices🏷️</a></li>
+      <li><a href="../profileWarble/profile.html">Profile👤</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+<div class="warble-packages">
+  <div class="warble-minimum">
+    <h2>Warble minimum</h2>
+    <img class="package-image" src="resources/warbleminimum.png" >
+    <p>- 8 lessons</p>
+    <p>€80 total</p>
+    <button class="package-btn">Subscribe</button>
+  </div>
+
+  <div class="warble-middle">
+    <h2>Warble average</h2>
+    <img class="package-image" src="resources/warbleaverage.png">
+    <p>- 12 lessons</p>
+    <p>€120 total</p>
+    <button class="package-btn">Subscribe</button>
+  </div>
+
+  <div class="warble-maximum">
+    <h2>Warble maximum</h2>
+    <img class="package-image" src="resources/warblemaximum.png" >
+    <p>- 16 lessons</p>
+    <p>€160 total</p>
+    <button class="package-btn">Subscribe</button>
+  </div>
+
+</div>
+
+<footer>
+
+  <p>© 2025 Warble. Warble Limited.</p>
+  <!--The button for chatbot-->
+  <div class="chat-container">
+    <div class="chat-button" onclick="toggleChat()">
+      🤖
+    </div>
+    <!--Chatbot itself-->
+    <div class="chat-popup" id="chatPopup">
+
+      <div class="chat-header">
+        <span>Apollo</span>
+
+      </div>
+
+      <div class="chat-body">
+
+        <div class="chatDisplay"></div>
+
+
+      </div>
+      <div class="chat-footer">
+        <textarea id="chatMessage" placeholder="Type your message"></textarea>
+        <button class="send-btn" onclick="sendMessage()">➤</button>
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+<script src="../mainWarble/warble.js"></script>
+</body>
+</html>
